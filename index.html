@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Player Selector</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body, html {
+        overflow-x: hidden;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand text-success" href="#">TEAM</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active text-success" aria-current="page" href="#">Home</a>
+            <a class="nav-link active text-success" href="#">Features</a>
+            <a class="nav-link active text-success" href="#">Players</a>
+            <a class="nav-link active text-success" href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SEARCHBAR -->
+    <section>
+      <div
+        id="search-section"
+        class="d-flex align-items-center justify-content-center mt-5"
+      >
+        <div class="container text-center pb-5">
+          <h2 class="text-success">Find Player..</h2>
+          <form id="searchForm" action="#" method="get">
+            <div class="input-group w-75 m-auto mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Type Here"
+                aria-describedby="button-addon2"
+                name="search_query"
+                id="searchInput"
+              />
+              <button class="btn btn-success" type="submit" id="button-addon2">
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAYER CARDS -->
+    <section>
+      <div class="row d-flex">
+        <div class="col-sm-12 col-md-3 order-md-2">
+          <h3 class="text-success mb-4 me-3 border border-success text-center ">
+            Selected Players: <span id="added-players-qunatity"></span>
+          </h3>
+          <div
+            id="added-players-container"
+            class="row row-cols-1 row-cols-md-1 g-2 rounded p-2"
+          ></div>
+        </div>
+
+        <div class="col-sm-12 col-md-9 order-md-1">
+          <div
+            id="players-container"
+            class="row row-cols-1 row-cols-md-3 g-2 p-2 m-3"
+          ></div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-dark border border-3 border-success">
+            <div class="modal-header">
+              <h1
+                class="modal-title fs-5 text-white"
+                id="single-player-title"
+              >
+                Player name
+              </h1>
+            </div>
+            <div id="single-player-body" class="modal-body p-0 bg-dark"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="card text-center">
+      <div class="card-header">All Rights Reserved</div>
+      <div class="card-body">
+        <h5 class="card-title">© Player Selector 2024. All Rights Reserved.</h5>
+        <p class="card-text">
+          All content on this website, including player information, lists,
+          text, graphics, logos, and images, is the property of PLAYER SELECTOR
+          or its content suppliers and protected by international copyright
+          laws. Unauthorized use and/or duplication of this material without
+          express and written permission from this site’s author and/or owner is
+          strictly prohibited.
+        </p>
+      </div>
+      <div class="card-footer text-muted">© Hamim Ahmed || 2024</div>
+    </div>
+
+    <!-- JS FILE -->
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
